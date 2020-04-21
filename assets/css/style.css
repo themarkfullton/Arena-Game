@@ -1,0 +1,14 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.iconPic {
+    width: 180px;
+}
+
+.archInfo {
+    font-weight: bolder;
+    color: red;
+    letter-spacing: 1px;
+}
