@@ -1,12 +1,12 @@
 let player;
 
-function Player(classType, level, health, constitution, exp, gold, strength, defense, agility, dexterity, intellect, endurance) {
+function Player(classType, health, constitution, strength, defense, agility, dexterity, intellect, endurance) {
     this.classType = classType;
-    this.level = level;
+    this.level = 1;
     this.health = health;
     this.constitution = constitution;
-    this.exp = exp;
-    this.gold = gold;
+    this.exp = 0;
+    this.gold = 0;
     this.itemL = ["Potion"];
     this.strength = strength;
     this.defense = defense;
