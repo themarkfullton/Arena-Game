@@ -1,3 +1,5 @@
+let enemy;
+
 function Enemy(enemyType, health, constitution, strength, defense, agility, dexterity, intellect, endurance) {
     this.enemyType = enemyType;
     this.health = health;
