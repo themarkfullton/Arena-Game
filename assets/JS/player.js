@@ -4,8 +4,11 @@ function Player(classType, health, constitution, strength, defense, agility, dex
     this.classType = classType;
     this.level = 1;
     this.health = health;
+    this.curHealth = health;
     this.constitution = constitution;
+    this.curConstitution = constitution;
     this.exp = 0;
+    this.toNextLvl = 100;
     this.gold = 0;
     this.strength = strength;
     this.defense = defense;
@@ -13,7 +16,6 @@ function Player(classType, health, constitution, strength, defense, agility, dex
     this.dexterity = dexterity;
     this.intellect = intellect;
     this.endurance = endurance;
-    this.toNextLvl = 100;
     this.items = ["potion"];
     this.abilities = [startAbility];
 }

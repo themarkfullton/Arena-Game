@@ -18,20 +18,34 @@ a {
 }
 
 /* Styling the health/const/exp bars */
-progress[value]::-webkit-progress-bar {
-    background-color: #eee;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+.progress {
+    height: 1.5em;
+    width: 150px;
+    margin: 10px;
+    background-color: #c9c9c9;
+    position: relative;
   }
-
-#healthBar::-webkit-progress-value{
+  .progress:before {
+    content: attr(data-label);
+    font-size: 0.8em;
+    position: absolute;
+    text-align: center;
+    top: 2.5px;
+    left: 0;
+    right: 0;
+  }
+  .progress .healthBar {
     background-color: red;
-}
-
-#constBar::-webkit-progress-value{
+    display: inline-block;
+    height: 100%;
+  }
+  .progress .constBar {
     background-color: blue;
-}
-
-#expBar::-webkit-progress-value {
+    display: inline-block;
+    height: 100%;
+  }
+  .progress .expBar {
     background-color: yellow;
-}
+    display: inline-block;
+    height: 100%;
+  }
