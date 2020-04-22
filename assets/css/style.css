@@ -7,8 +7,31 @@ a {
     width: 180px;
 }
 
+.batIconPic {
+    width: 180px;
+}
+
 .archInfo {
     font-weight: bolder;
     color: red;
     letter-spacing: 1px;
+}
+
+/* Styling the health/const/exp bars */
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+
+#healthBar::-webkit-progress-value{
+    background-color: red;
+}
+
+#constBar::-webkit-progress-value{
+    background-color: blue;
+}
+
+#expBar::-webkit-progress-value {
+    background-color: yellow;
 }

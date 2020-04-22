@@ -46,3 +46,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 150px;
+    height: 20px;
+}
