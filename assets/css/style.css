@@ -17,6 +17,12 @@ a {
     letter-spacing: 1px;
 }
 
+.dungeon {
+    visibility: hidden;
+    width: 100%;
+    height: 100px;
+}
+
 /* Styling the health/const/exp bars */
 .progress {
     height: 1.5em;
