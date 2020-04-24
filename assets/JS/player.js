@@ -124,7 +124,8 @@ let PlayerMoves = {
             }
             else {
                 enemyTurn();
-                
+
+                getPlayerHealth.innerHTML = '<span class="healthBar" style="width: ' + ((player.curHealth/player.health)*100) + '%"></span>';
                 getPlayerConst.innerHTML = '<span class="constBar" style="width: ' + ((player.curConstitution/player.constitution)*100) + '%"></span>';
 
                 getEnemyHealth.innerHTML = '<span class="healthBar" style="width: ' + ((enemy.curHealth/enemy.health)*100) + '%"></span>';
@@ -145,6 +146,7 @@ let PlayerMoves = {
             else {
                 playerTurn();
 
+                getEnemyHealth.innerHTML = '<span class="healthBar" style="width: ' + ((enemy.curConstitution/enemy.constitution)*100) + '%"></span>';
                 getEnemyConst.innerHTML = '<span class="constBar" style="width: ' + ((enemy.curConstitution/enemy.constitution)*100) + '%"></span>';
 
                 getPlayerHealth.innerHTML = '<span class="healthBar" style="width: ' + ((player.curHealth/player.health)*100) + '%"></span>';
