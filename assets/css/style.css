@@ -25,7 +25,7 @@ h1, h2, h3 {
 #interface {
     position: absolute;
     padding: 150px 50px 150px 50px;
-    height: 100vh;
+    height: auto;
     background-color: #4f3b78;
 }
 

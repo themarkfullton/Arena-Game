@@ -15,25 +15,40 @@
     <script src="assets/js/shop.js"></script>
 </head>
 <body>
-    <div class="row d-flex justify-content-center" style="margin: 10px">
-        <div class="col-lg-4">
-        <a href="#" onclick="script.charChangeImg('heirPic', 'heir')"><img class="iconPic" id="heirPic" src="assets/images/icons/dialogue/heir00.png" alt="adventurer"></a>
-        </div>
-        <div class="col-lg-8 my-auto">
-            <h3>Adventurer</h3>
-            <p>Surmounter of the unsurmountable and discoverer of the unknown. The Dreamlands lured you in with their promise of exploration and thrills.</p>
-            <p><span class="archInfo">[ Physical-Based; Well-Rounded ]</span></p>
+
+    <div class="header col-lg-12">
+        <div class="text-center">
+            <h1>Dreamlands</h1>
+            <p>An HP Lovecraft Inspired Arena Game</p>
         </div>
     </div>
 
-    <a href="#" onclick="controller.setGameStart('outlaw')">
+    <div class="container d-flex justify-content-center">
+
+        <div id="interface" class="col-lg-9">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="script.charAltImg()">Alternate Outfits</button>
+
+    <a href="#" onclick="controller.setGameStart('heir')">
         <div class="row d-flex justify-content-center" style="margin:10px">
-            <div class="col-lg-4">
-            <img class="iconPic" src="assets/images/icon-player/icon-outlaw.png" alt="outlaw">
+            <div class="col-lg-4 my-auto">
+            <img id="cHeirIcon" class="iconPic" src="assets/images/Icons/Dialogue/heir00.png" alt="heir">
             </div>
             <div class="col-lg-8 my-auto">
-                <h3>Outlaw</h3>
-                <p>Always on the search for valuable secrets. Lured into the Dreamlands by whisperings of legendary treasure.</p>
+                <h3>The Heir</h3>
+                <p>Ever since you remember, your family has been sweeping dark secrets under the rug. Your parents always required things of you that have made no sense. But now they’re gone. Along with the vast family fortune, you also inherited an ominous looking book filled with cryptic threats and devilish illustrations… </p>
+                <p><span class="archInfo">[ Physical Based; Quick and skilled but weak ]</span></p>
+            </div>
+        </div>
+    </a>
+
+    <a href="#" onclick="controller.setGameStart('outlaw')">
+        <div class="row d-flex justify-content-center" style="margin:10px">
+            <div class="col-lg-4 my-auto">
+            <img id="cOutIcon" class="iconPic" src="assets/images/Icons/Dialogue/outlaw00.png" alt="outlaw">
+            </div>
+            <div class="col-lg-8 my-auto">
+                <h3>The Outlaw</h3>
+                <p>It was supposed to be the heist of the century. An exploration team in the Arctic had unearthed a massive crystalline jewel, etched with patterns more primal than written history and had passed it on to their patron, a rich fool fancying himself an anthropologist. Your client, another rich fool, wanted you to “acquire” the item for them…. But the moment you put your hands on the thing, everything faded to black…</p>
                 <p><span class="archInfo">[ Physical Based; Quick and skilled but weak ]</span></p>
             </div>
         </div>
@@ -41,12 +56,12 @@
 
     <a href="#" onclick="controller.setGameStart('cultist')">
         <div class="row d-flex justify-content-center" style="margin:10px">
-            <div class="col-lg-4">
-            <img class="iconPic" src="assets/images/icon-player/icon-cultist.png" alt="cultist">
+            <div class="col-lg-4 my-auto">
+            <img id="cCultIcon" class="iconPic" src="assets/images/Icons/Dialogue/cultist00.png" alt="cultist">
             </div>
             <div class="col-lg-8 my-auto">
-                <h3>Cultist</h3>
-                <p>Worshipper of the Old Ones, you weave the fabric of reality at will. The Dreamlands are your regular walking grounds.</p>
+                <h3>The Cultist</h3>
+                <p>Although you look it, you’re not entirely human; where you’re from, no one really is. Back in the colonial days, your ancestors struck a deal with an ungodly group of creatures: They populate the mines of your town with precious materials and the town provides them with mates. Overtime, the interbreeding resulted in hellish creatures like you—halflings that worship their monstrous parents. That is, however, until the mines dried up. The creatures are no longer keeping their end of the deal… but why…?</p>
                 <p><span class="archInfo">[ Mental-Based; Access to arcane abilities ]</span></p>
             </div>
         </div>
@@ -54,15 +69,17 @@
 
     <a href="#" onclick="controller.setGameStart('writer')">
         <div class="row d-flex justify-content-center" style="margin:10px">
-            <div class="col-lg-4">
-            <img class="iconPic" src="assets/images/icon-player/icon-madman.png" alt="madman">
+            <div class="col-lg-4 my-auto">
+            <img id="cWritIcon" class="iconPic" src="assets/images/Icons/Dialogue/writer00.png" alt="writer">
             </div>
             <div class="col-lg-8 my-auto">
-                <h3>Madman</h3>
-                <p>Writer convinced that this hellscape is his own handiwork. Woke up in the Dreamlands after a long night of writing.</p>
+                <h3>The Writer</h3>
+                <p>Master of horror, they called you. Every story you released raked in a vast audience, captivated by the fantastic and terrible worlds you wove. What they didn’t realize, however, was that the fearsome tales were all real—every time you close your eyes, you’re swept away by harrowing journeys into the Dreamlands…</p>
                 <p><span class="archInfo">[ Mental-Based; Access to storytelling abilities  ]</span></p>
             </div>
         </div>
     </a>
+        </div>
+    </div>
 </body>
 </html>
