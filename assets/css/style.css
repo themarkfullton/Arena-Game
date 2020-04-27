@@ -12,13 +12,18 @@ h1, h2, h3 {
 }
 
 .header {
+    position: absolute;
     width: 100vw;
     height: 100px;
+    margin-top: 10px;
     padding: 5px;
+    z-index: 10;
     background-color: #202040;
 }
 
 #interface {
+    position: relative;
+    padding-top: 300px;
     padding: 50px;
     height: 100vh;
     background-color: #4f3b78;
@@ -48,11 +53,4 @@ h1, h2, h3 {
 .btn-lg:active {
     background-color: #202040;
     border: none;
-}
-
-.footer {
-    width: 100vw;
-    height: 60px;
-    padding: 5px;
-    background-color: #202040;
 }
