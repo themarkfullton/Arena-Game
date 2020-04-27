@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 
 body {
     background-image: url("../images/background.png");
     background-color: #181818 ;
-    font-family: 'Forum', cursive;
+    color: #c6bbdd;
+    font-family: 'Philosopher', sans-serif;
 }
 
 h1, h2, h3 {
@@ -22,9 +23,8 @@ h1, h2, h3 {
 }
 
 #interface {
-    position: relative;
-    padding-top: 300px;
-    padding: 50px;
+    position: absolute;
+    padding: 150px 50px 150px 50px;
     height: 100vh;
     background-color: #4f3b78;
 }
@@ -43,14 +43,17 @@ h1, h2, h3 {
 .btn-lg {
     background-color: #202040;
     border: none;
+    color: #c6bbdd;
 }
 
 .btn-lg:hover{
     background-color: #927fbf;
     border: none;
+    color: #c6bbdd;
 }
 
 .btn-lg:active {
     background-color: #202040;
     border: none;
+    color: #c6bbdd;
 }

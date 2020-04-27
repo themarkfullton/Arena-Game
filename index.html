@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="controller.js"></script>
-    <script src="player.js"></script>
-    <script src="enemy.js"></script>
-    <script src="shop.js"></script>
+    <script src="assets/js/controller.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/player.js"></script>
+    <script src="assets/js/enemy.js"></script>
+    <script src="assets/js/shop.js"></script>
 </head>
 <body>
     <div class="header col-lg-12">
-        <div class="text-center text-white">
+        <div class="text-center">
             <h1>Dreamlands</h1>
             <p>An HP Lovecraft Inspired Arena Game</p>
         </div>
@@ -23,7 +24,7 @@
 
     <div class="container d-flex justify-content-center">
 
-        <div id="interface" class="col-lg-10 text-white">
+        <div id="interface" class="col-lg-9">
             <p class="quote">“Wise men have interpreted dreams, and the gods have laughed”</p>
 	        <p class="quotePers">-H.P. Lovecraft (“The Dreamland Series”)</p>
 
@@ -33,7 +34,7 @@
 
             <p>Though you have met with many warnings, you have heeded none of them. For one reason or another, you have made your way into these Dreamlands. Can you survive them?</p>
             
-            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="">Block level button</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="script.instructions()">Block level button</button>
         </div>
     </div>
 
