@@ -57,3 +57,15 @@ h1, h2, h3 {
     border: none;
     color: #c6bbdd;
 }
+
+.iconPic {
+    margin: 1px;
+    border-radius: 4px;
+    filter: contrast(200%);
+    filter: grayscale(100%);
+}
+
+.iconPic:hover {
+    width: 90px;
+    filter: none;
+}

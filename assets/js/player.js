@@ -1,5 +1,6 @@
 let player = {
     pName: '',
+    pId: '',
     classType: '',
     disClassType: '',
     imgage: 0,
@@ -26,7 +27,11 @@ let player = {
     statusGood: "none", // Lists any GOOD status impacting player; one at a time
     statusBad: "none", // Lists any BAD status impacting player; one at a time
 
-    createPlayer: function (classType, fightStyle, health, stamina, willpower, strength, intelligence, agility, dexterity, defense, tenacity, ability){
+    namePlayer: function (pName){
+        this.pName = pName;
+    },
+
+    createPlayer: function (pId, classType, fightStyle, health, stamina, willpower, strength, intelligence, agility, dexterity, defense, tenacity, ability){
         this.classType = classType;
         switch (classType){
             case "heir":
@@ -42,6 +47,7 @@ let player = {
                 this.disClassType = "The Writer";
                 break;
         };
+        this.pId = pId;
         this.fightStyle = fightStyle;
         this.level = 1;
         this.health = health;

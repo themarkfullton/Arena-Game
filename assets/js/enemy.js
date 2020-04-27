@@ -45,3 +45,7 @@ let Enemy = {
         this.statusBad = "none";
     },
 }
+
+let bestiary = {
+    
+}
