@@ -1,7 +1,23 @@
-<a href="#" onclick="controller.setGameStart('heir')">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/controller.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/player.js"></script>
+    <script src="assets/js/enemy.js"></script>
+    <script src="assets/js/shop.js"></script>
+</head>
+<body>
     <div class="row d-flex justify-content-center" style="margin: 10px">
         <div class="col-lg-4">
-        <img class="iconPic" src="assets/images/icon-player/icon-adventurer.png" alt="adventurer">
+        <a href="#" onclick="script.charChangeImg('heirPic', 'heir')"><img class="iconPic" id="heirPic" src="assets/images/icons/dialogue/heir00.png" alt="adventurer"></a>
         </div>
         <div class="col-lg-8 my-auto">
             <h3>Adventurer</h3>
@@ -9,7 +25,6 @@
             <p><span class="archInfo">[ Physical-Based; Well-Rounded ]</span></p>
         </div>
     </div>
-    </a>
 
     <a href="#" onclick="controller.setGameStart('outlaw')">
         <div class="row d-flex justify-content-center" style="margin:10px">
@@ -49,3 +64,5 @@
             </div>
         </div>
     </a>
+</body>
+</html>
