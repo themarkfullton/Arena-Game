@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 body {
     background-image: url("../images/background.png");
     background-color: #181818 ;
+    font-family: 'Forum', cursive;
+}
+
+h1, h2, h3 {
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .header {
     width: 100vw;
     height: 100px;
     padding: 5px;
-    background-color: #202040; /*181818*/
+    background-color: #202040;
 }
 
 #interface {
@@ -22,13 +30,24 @@ body {
 }
 
 .quotePers {
-
+    font-style: italic;
     text-align: right;
     font-size: 17px;
 }
 
 .btn-lg {
     background-color: #202040;
+    border: none;
+}
+
+.btn-lg:hover{
+    background-color: #927fbf;
+    border: none;
+}
+
+.btn-lg:active {
+    background-color: #202040;
+    border: none;
 }
 
 .footer {
