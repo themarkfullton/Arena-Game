@@ -71,6 +71,15 @@ h1, h2, h3 {
     filter: none;
 }
 
+/* STORY RELATED */
+#storyTelling{
+
+}
+
+#charTalk {
+    background-color: #202040;
+    margin: 15px 40px 15px 40px;
+}
 
 /* BATTLE RELATED */
 #battlescreen {
