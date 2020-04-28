@@ -1,7 +1,12 @@
 let controller = {
     setGameStart: function(pId, classType){
-        player.createPlayer(pId, classType);
+        this.createPlayer(pId, classType);
         this.displayInfo();
+    },
+
+    createPlayer: function(pId, classType){
+        player.setPlayer(pId, classType);
+        $( "#interface" ).html("<p>IT WORKED</p>");
     },
 
     //Temporary Function to see if controller can access the player object
