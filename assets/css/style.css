@@ -69,3 +69,55 @@ h1, h2, h3 {
     width: 90px;
     filter: none;
 }
+
+
+/* BATTLE RELATED */
+#battlescreen {
+    height: 400px;
+    width: 100%;
+    border-radius: 25px;
+    background-image: url("../images/Setting/nether.png");
+    background-size: cover;
+}
+
+#insideBattle {
+    padding: 10px 30px 10px 30px;
+}
+
+#battlePlayer, #battleEnemy {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.progress {
+    height: 1.5em;
+    width: 150px;
+    margin: 10px;
+    background-color: #c9c9c9;
+    position: relative;
+  }
+  .progress:before {
+    content: attr(data-label);
+    font-size: 0.8em;
+    position: absolute;
+    text-align: center;
+    top: 2.5px;
+    left: 0;
+    right: 0;
+  }
+  .progress .healthBar {
+    background-color: red;
+    display: inline-block;
+    height: 100%;
+  }
+  .progress .constBar {
+    background-color: blue;
+    display: inline-block;
+    height: 100%;
+  }
+  .progress .expBar {
+    background-color: yellow;
+    display: inline-block;
+    height: 100%;
+  }
