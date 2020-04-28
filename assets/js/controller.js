@@ -1,11 +1,12 @@
 let controller = {
     setGameStart: function(pId, classType){
         this.createPlayer(pId, classType);
-        this.displayInfo();
+        script.charConfScreen();
     },
 
     createPlayer: function(pId, classType){
         player = new Player (pId, classType);
+        console.log("New player of ID " + pId + " and class type " + classType + " has been created.")
         
     },
 
