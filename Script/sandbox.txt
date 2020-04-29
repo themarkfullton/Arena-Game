@@ -1,6 +1,6 @@
 ==========================[HEIR - INTRO]=========================================================
 
-"For your own protection, avoid your reflection."
+"For your protection, avoid your own reflection."
 
 It was the family mantra. Ever since you were young, your parents had drilled it into you. When you noticed the new mirror tucked close by the scene of their "suicide", then, you became suspicious. 
 
@@ -114,3 +114,11 @@ Something in you agrees with Noden's claim; you lower your weapon.
 << Nodens: You don't FIND one; you have to hunt one down. When I feel you can handle it, I'll connect your path with that of a fellow hunter. Then, it's hunt--or be hunted. >>
 
 Without giving you a chance to reply, Nodens fades from view. In his stead stands what can only be another "hunter"...
+
+==========================[CULTIST - LEVEL 1 INTRO]=========================================================
+
+Feeling a brush of cold wind, you awaken.
+
+==========================[WRITER - LEVEL 1 INTRO]=========================================================
+
+Feeling a brush of cold wind, you awaken. 
