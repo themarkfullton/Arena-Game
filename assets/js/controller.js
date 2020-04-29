@@ -12,7 +12,8 @@ let controller = {
 
     namePlayer: function(){
         player.pName = $('#pName').val();
-        $( "#interface" ).html("<p>IT WORKED</p><p>Player Name: " + player.pName + "</p>");
+        script.scriptIntro();
+        script.scriptL1Start();
     }
 
 }

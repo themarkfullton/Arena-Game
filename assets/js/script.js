@@ -20,19 +20,32 @@ let script = {
     scriptIntro: function(){
         switch(player.classType){
             case "heir":
-                $("#interface").html('');
-                $("#interface").html('');
+                $("#interface").html('<div class="row"><div class="col-lg-4 my-auto"><img src="assets/images/Icons/Players/cultist' + player.pId + '.png"></div><div class="col-lg-8 my-auto"><p>"For your protection, avoid your own reflection."</p><p>It was the family mantra. Ever since you were young, your parents had drilled it into you. When you noticed the new mirror tucked close by the scene of their "suicide", then, you became suspicious.</p><p>Officials were quick to admit the situation was odd--both husband and wife gone at the same moment; with no physical cause of death--but could offer neither explaination nor time to uncovering the truth. For a day or two, you tried to move on, but the mystery continued to eat away at you. You always returned to that curiousity, that sinister mirror.</p><p>Eventually, you gave into your curiousity. After a few glasses of wine to dull your nerves, you took the mirror into your hands and willingly broke the family rule: You stared right at your reflection.</p><p>The world fades from view.</p><button type="button" class="btn btn-primary btn-lg btn-block" onclick="script.scritLvl1Start()">Wake Up</button></div></div>');
                 break;
             case "outlaw":
-                $("#interface").html('');
                 $("#interface").html('');
                 break;
             case "cultist":
                 $("#interface").html('');
+                break;
+            case "writer":
+                $("#interface").html(''); 
+                break;
+        }
+    },
+
+    scriptL1Start: function(){
+        switch(player.classType){
+            case "heir":
+                $("#interface").html('');
+                break;
+            case "outlaw":
+                $("#interface").html('');
+                break;
+            case "cultist":
                 $("#interface").html('');
                 break;
             case "writer":
-                $("#interface").html('');
                 $("#interface").html(''); 
                 break;
         }
