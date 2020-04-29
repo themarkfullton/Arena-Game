@@ -72,10 +72,6 @@ h1, h2, h3 {
 }
 
 /* STORY RELATED */
-#storyTelling{
-
-}
-
 #charTalk {
     background-color: #202040;
     margin: 15px 40px 15px 40px;
@@ -178,4 +174,65 @@ h1, h2, h3 {
     color: #6f42c1;
     background-color: #0f0f1e;
     cursor: pointer;
+}
+
+/*Shop Related*/
+#shopOuter{
+    width: 90%;
+    height: 400px;
+}
+#inventoryExplanation {
+    background-color: #202040;
+    margin-bottom: 20px;
+    border-radius: 0 25px 25px 0;
+    padding: 15px;
+}
+#shopkeep{
+    width: 30%;
+    height: 100%;
+}
+#shopkeep img{
+    width: 100%;
+}
+
+#inventory {
+    width: 70%;
+}
+
+#inventoryItems {
+    position: relative;
+    margin: 0 13px;
+}
+
+.shopItem {
+    background-color: #8c68ce;
+    border-radius: 10px;
+    width: 30%;
+    height: 150px;
+}
+
+.shopItem img{
+    height: 60%;
+}
+
+.itemDesc{
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 10;
+}
+
+#buyNothing {
+    margin-top: 30px;
+}
+
+.shopItem:hover .itemDesc{
+    visibility: visible;
 }
