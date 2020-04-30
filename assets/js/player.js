@@ -7,7 +7,7 @@ function Player (pId, classType) {
             this.disClassType = "The Heir";
             this.fightStyle = "01";
             this.health = 150; 
-            this.willpower = 0;
+            this.willpower = 5;
             this.strength = 20; 
             this.intelligence = 0;
             this.agility = 20;
@@ -19,7 +19,7 @@ function Player (pId, classType) {
             this.disClassType = "The Outlaw";
             this.fightStyle = "01"
             this.health = 110; 
-            this.willpower = 0;
+            this.willpower = 10;
             this.strength = 10; 
             this.intelligence = 0;
             this.agility = 30;
@@ -31,7 +31,7 @@ function Player (pId, classType) {
             this.disClassType = "The Cultist";
             this.health = 50;
             this.willpower = 30;
-            this.strength = 0; 
+            this.strength = 5; 
             this.intelligence = 20;
             this.agility = 20;
             this.dexterity = 20;
@@ -42,7 +42,7 @@ function Player (pId, classType) {
             this.disClassType = "The Writer";
             this.health = 90;
             this.willpower = 20;
-            this.strength = 0; 
+            this.strength = 2; 
             this.intelligence = 10;
             this.agility = 15;
             this.dexterity = 15;
