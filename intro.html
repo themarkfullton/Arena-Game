@@ -25,20 +25,25 @@
     <div class="container d-flex justify-content-center">
 
         <div id="interface" class="col-lg-9">
-            <div class="row">
-                <div class="col-lg-4 my-auto">
-                    <img src="assets/images/Icons/Players/cultist00.png">
-                </div>
-                <div class="col-lg-8 my-auto">
-                    <p>Long ago, your ancestors had to make a choice: Starvation or servitude. They chose the latter, pledging to worship and intermarry with otherworldly creatures--in exchange for natural resources. This pledge bred creatures like you; creatures that only appeared human--and that only vaguely so.</p>
+            <div id="storyTelling">
+    
+                <p>Feeling a brush of cold wind, you awaken.</p> 
 
-                    <p>Though your town has continued their side of the pledge, recent events indicate that your supernatural overlords have decided to break their promise--and no one is certain as to why. Though blame and bickering weave their way into daily conversation, you and your fellows haven't taken your complaints to the other side. Fickle or not, your inhuman overlords are a force that no one is willing to reckon with.</p>
-                    
-                    <p>As time drags on, however, resources further deplete and your curiousity grows. Could something have happened to your protectors? And if so, is it something you'd like to stick your nose into?</p>
-                    
-                    <p>You eventually decide to take a peak over the hedge: Against everyone's dissent, you open up a portal to the "other side." Almost immediately, however, you hear a deep, rumbling laughter. Everything else fades away.</p>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="script.scritLvl1Start()">Wake Up</button>
+                <p>You're standing in an ancient forest... with no sky. Gnarled roots twist from the soil, only to meet with a languid, green pool of water swirling overhead. Black shadows twist through the fathomless ceiling of water.</p>
+                
+                <div id="charTalk" class="row d-flex justify-content-between">
+                    <div id="charPort" class="col-lg-2 my-auto text-center">
+                        <img src="assets/images/Icons/Dialogue/cultist00.png">
+                        <h4>CHARNAME</h4>
+                    </div>
+                    <div id="charWords" class="col-lg-10 my-auto">
+                        <p>INSERT QUOTE HERE</p>
+                    </div>
                 </div>
+            
+                <p>Suddenly, the heavy prickle of a lurking gaze chills your flesh, cutting all observation short.</p>
+                
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="controller.setPreFight()">Do a Thing</button>
             </div>
             
         </div>
