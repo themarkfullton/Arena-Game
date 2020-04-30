@@ -14,7 +14,6 @@ function Player (pId, classType) {
             this.dexterity = 10;
             this.defense = 25;
             this.tenacity = 10;
-            this.abilities = ["00"]; // Has abilities 00-04
             break;
         case "outlaw":
             this.disClassType = "The Outlaw";
@@ -27,7 +26,6 @@ function Player (pId, classType) {
             this.dexterity = 30;
             this.defense = 15;
             this.tenacity = 10;
-            this.abilities = ["06"];  // Has abilities 05-09
             break;
         case "cultist":
             this.disClassType = "The Cultist";
@@ -39,7 +37,6 @@ function Player (pId, classType) {
             this.dexterity = 20;
             this.defense = 10;
             this.tenacity = 15;
-            this.abilities = ["10"]; // Has abilities 10-14
             break;
         case "writer":
             this.disClassType = "The Writer";
@@ -51,7 +48,6 @@ function Player (pId, classType) {
             this.dexterity = 15;
             this.defense = 20;
             this.tenacity = 20;
-            this.abilities = ["15"]; //Has abilities 15-19
             break;
     };
     
@@ -64,7 +60,5 @@ function Player (pId, classType) {
     this.gold = 10;
     this.bestiary = [];
     this.inventory = [];
-    this.statusGood = "none";
-    this.statusBad = "none";
     this.pName ='';
 }

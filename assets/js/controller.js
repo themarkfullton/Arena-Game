@@ -15,27 +15,29 @@ let controller = {
         script.scriptIntro();
     },
 
-    setRanNum: function(level){
-        switch(level){
-            case "1":
+    // Depending on the level, different enemies are availiable.
+    // This function creates a random number based on player level.
+    setRanNum: function(){
+        switch(player.level){
+            case 1:
                 let ranNum = Math.floor(Math.random() * Math.floor(4)); // returns a random num 0 to 3
                 break;
-            case "2":
+            case 2:
                 let ranNum = Math.floor(Math.random() * Math.floor(8)); // returns a random num 0 to 7
                 break;
-            case "3":
+            case 3:
                 let ranNum = Math.floor(Math.random() * Math.floor(13)); // returns a random num 0 to 12
                 break;
-            case "4":
+            case 4:
                 let ranNum = Math.floor(Math.random() * Math.floor(17)); // returns a random num 0 to 16
                 break;
         }
             return ranNum;
     },
 
-    setEnemy: function(level){
-        let tRanNum = this.setRanNum(level);
-        enemy = new Enemy (bestiary[tRanNum].)
+    setEnemy: function(){
+        let tRanNum = this.setRanNum();
+        enemy = new Enemy (tRanNum);
     },
 
     setFight: function(){
