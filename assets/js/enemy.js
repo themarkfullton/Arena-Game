@@ -1,28 +1,19 @@
 let enemy;
 
-function Enemy (enemyType, fightStyle, ) {
-    this.classType = classType;
-    this.disClassType = "The Heir";
-    this.fightStyle = "01";
-    this.health = 150;
-    this.stamina = 30; 
-    this.willpower = 0;
-    this.strength = 20; 
-    this.intelligence = 0;
-    this.agility = 20;
-    this.dexterity = 10;
-    this.defense = 25;
-    this.tenacity = 10;
-    this.abilities.push("00"); // Has abilities 00-04
-    this.level = 1;
+function Enemy (i) {
+    this.classType = bestiary[i].classType;
+    this.disClassType= bestiary[i].disClassType;
+    this.level= bestiary[i].level;
+    this.health= bestiary[i].health;
     this.curHealth = health;
-    this.curStam = stamina;
-    this.curWill = willpower; 
-    this.exp = 0;
-    this.toNextLvl = 100;
-    this.gold = 10;
-    this.bestiary = [];
-    this.inventory = [];
-    this.statusGood = "none";
-    this.statusBad = "none";
+    this.willpower = bestiary[i].willpower;
+    this.curWill = willpower;
+    this.strength = bestiary[i].strength; 
+    this.intelligence = bestiary[i].intelligence;
+    this.agility = bestiary[i].agility;
+    this.dexterity = bestiary[i].dexterity;
+    this.defense = bestiary[i].defense;
+    this.tenacity = bestiary[i].tenacity;
+    this.exp = bestiary[i].exp;
+    this.gold = bestiary[i].gold;
 }

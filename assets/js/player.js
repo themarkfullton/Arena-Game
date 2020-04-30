@@ -6,8 +6,7 @@ function Player (pId, classType) {
         case "heir":
             this.disClassType = "The Heir";
             this.fightStyle = "01";
-            this.health = 150;
-            this.stamina = 30; 
+            this.health = 150; 
             this.willpower = 0;
             this.strength = 20; 
             this.intelligence = 0;
@@ -20,8 +19,7 @@ function Player (pId, classType) {
         case "outlaw":
             this.disClassType = "The Outlaw";
             this.fightStyle = "01"
-            this.health = 110;
-            this.stamina = 20; 
+            this.health = 110; 
             this.willpower = 0;
             this.strength = 10; 
             this.intelligence = 0;
@@ -34,7 +32,6 @@ function Player (pId, classType) {
         case "cultist":
             this.disClassType = "The Cultist";
             this.health = 50;
-            this.stamina = 0; 
             this.willpower = 30;
             this.strength = 0; 
             this.intelligence = 20;
@@ -47,7 +44,6 @@ function Player (pId, classType) {
         case "writer":
             this.disClassType = "The Writer";
             this.health = 90;
-            this.stamina = 0; 
             this.willpower = 20;
             this.strength = 0; 
             this.intelligence = 10;
@@ -62,7 +58,6 @@ function Player (pId, classType) {
     this.pId = pId;
     this.level = 1;
     this.curHealth = this.health;
-    this.curStam = this.stamina;
     this.curWill = this.willpower; 
     this.exp = 0;
     this.toNextLvl = 100;
