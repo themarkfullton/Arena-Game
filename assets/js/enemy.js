@@ -1,6 +1,7 @@
 let enemy;
 
 function Enemy (i) {
+    console.log("Trying to do bestiary [ " + i + "]");
     this.classType = bestiary[i].classType;
     this.disClassType= bestiary[i].disClassType;
     this.level= bestiary[i].level;

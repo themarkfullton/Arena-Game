@@ -1,4 +1,4 @@
-let bestiary = [
+var bestiary = [
     ghast = {
         classType: "ghast",
         disClassType: "Ghast",
