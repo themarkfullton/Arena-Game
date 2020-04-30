@@ -18,32 +18,36 @@ let controller = {
     // Depending on the level, different enemies are availiable.
     // This function creates a random number based on player level.
     setRanNum: function(){
+        let sRanNum;
+
         switch(player.level){
             case 1:
-                let ranNum = Math.floor(Math.random() * Math.floor(4)); // returns a random num 0 to 3
+                sRanNum = Math.floor(Math.random() * Math.floor(4)); // returns a random num 0 to 3
                 break;
             case 2:
-                let ranNum = Math.floor(Math.random() * Math.floor(8)); // returns a random num 0 to 7
+                sRanNum = Math.floor(Math.random() * Math.floor(8)); // returns a random num 0 to 7
                 break;
             case 3:
-                let ranNum = Math.floor(Math.random() * Math.floor(13)); // returns a random num 0 to 12
+                sRanNum = Math.floor(Math.random() * Math.floor(13)); // returns a random num 0 to 12
                 break;
             case 4:
-                let ranNum = Math.floor(Math.random() * Math.floor(17)); // returns a random num 0 to 16
+                sRanNum = Math.floor(Math.random() * Math.floor(17)); // returns a random num 0 to 16
                 break;
         }
-            return ranNum;
+            return sRanNum;
     },
 
     setEnemy: function(){
-        let tRanNum = this.setRanNum();
-        enemy = new Enemy (tRanNum);
+        let wRanNum = this.setRanNum();
+        enemy = new Enemy (wRanNum);
     },
 
     setFight: function(){
-
+        this.setEnemy();
 
         $("#interface").html('<div id="battlescreen"><div class="row d-flex justify-content-between" id="insideBattle"><div id="battlePlayer"><div id="battlePlayerName"><h3>' + player.pName + '<span id="battleLvl">Level' + player.level + '</span></h3></div><div id="battlePlayerBars" class="col-lg-4"><div class ="progress" id="playerHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((player.curHealth/player.health)*100) +'%"></span></div><div class ="progress" id="playerWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((player.curWill/player.willpower)*100) + '%"></span></div><div class ="progress" id="playerExpBar" data-label="Experience"><span class="expBar" style="width: ' + ((player.exp/player.toNextLvl)*100) +'"></span></div></div></div><div id="battleEnemy"><div id="battleEnemyName"><h3>' + enemy.disClassType + '<span id="battleLvl">Level' + enemy.level + '</span></h3></div><div id="battleEnemyBars" class="col-lg-4"><div class ="progress" id="enemyHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((enemy.curHealth/enemy.health)*100) + '%"></span></div><div class ="progress" id="enemyWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((enemy.curWill/enemy.will)*100) + '%"></span></div></div></div></div><div class="row d-flex justify-content-between" id="insideBattlePicRow"><div id="battlePlayerPic"><img class="battlePic" src="assets/images/Icons/Players/cultist00.png"></div><div id="battleEnemyPic"><img class="battlePic" src="assets/images/Icons/Enemies/ghast.png"></div></div></div><div id="battleNotes"><p>A ' + enemy.disClassType + ' appears</p></div><div id="actions"><div class="row justify-content-center"></div></div></div>');
+    
+        $("#battlescreen").style.backgroundImage = "url('../images/setting/"+ player.level +".png')";
     },
 
     
