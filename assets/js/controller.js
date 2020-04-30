@@ -38,7 +38,7 @@ let controller = {
     },
 
     setEnemy: function(){
-        enemy = new Enemy (this.setRanNum());
+        enemy = new Enemy(this.setRanNum());
     },
 
     setFight: function(){

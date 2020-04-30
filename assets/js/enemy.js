@@ -1,14 +1,14 @@
 let enemy;
 
 function Enemy (i) {
-    console.log("Trying to do bestiary [ " + i + "]");
+    console.log("Trying to do bestiary [" + i + "]");
     this.classType = bestiary[i].classType;
     this.disClassType= bestiary[i].disClassType;
     this.level= bestiary[i].level;
     this.health= bestiary[i].health;
-    this.curHealth = health;
+    this.curHealth = this.health;
     this.willpower = bestiary[i].willpower;
-    this.curWill = willpower;
+    this.curWill = this.willpower;
     this.strength = bestiary[i].strength; 
     this.intelligence = bestiary[i].intelligence;
     this.agility = bestiary[i].agility;
