@@ -45,49 +45,54 @@ let controller = {
         let allPActions = [];
         let pAction = $("<div>");
         pAction.attr("class", "ability");
-        pAction.attr("onclick", "PlayerMoves.Attack()");
+        pAction.attr("onclick", "controller.battleRound(0)");
         pAction.html("<p>Attack</p>");
         
         allPActions.push(pAction);
 
-        pAction.attr("onclick", "PlayerMoves.Defend()");
+        pAction.attr("onclick", "controller.battleRound(1)");
         pAction.html("<p>Defend</p>");
 
         allPActions.push(pAction);
 
-        pAction.attr("onclick", "PlayerMoves.Bribe()");
+        pAction.attr("onclick", "controller.battleRound(2)");
         pAction.html("<p>Bribe</p>");
+
+        allPActions.push(pAction);
+
+        pAction.attr("onclick", "controller.battleRound(3)");
+        pAction.html("<p>Use Item</p>");
 
         allPActions.push(pAction);
 
         switch (player.classType){
             case "heir":
                 if (player.level == 1){
-                    pAction.attr("onclick", "PlayerMoves.FirstAid()");
+                    pAction.attr("onclick", "controller.battleRound(10)");
                     pAction.html("<p>First Aid</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 2){
-                    pAction.attr("onclick", "PlayerMoves.Reflect()");
+                    pAction.attr("onclick", "controller.battleRound(11)");
                     pAction.html("<p>Reflect</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 3){
-                    pAction.attr("onclick", "PlayerMoves.OtherSide()");
+                    pAction.attr("onclick", "controller.battleRound(12)");
                     pAction.html("<p>Mirror Travel</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 4){
-                    pAction.attr("onclick", "PlayerMoves.Mimicry()");
+                    pAction.attr("onclick", "controller.battleRound(13)");
                     pAction.html("<p>Mimic</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 5){
-                    pAction.attr("onclick", "PlayerMoves.HereditaryChaos()");
+                    pAction.attr("onclick", "controller.battleRound(14)");
                     pAction.html("<p>Hereditary Chaos</p>");
 
                     allPActions.push(pAction);
@@ -95,31 +100,31 @@ let controller = {
                 break;
             case "outlaw":
                 if (player.level == 1){
-                    pAction.attr("onclick", "PlayerMoves.UncannySense()");
+                    pAction.attr("onclick", "controller.battleRound(15)");
                     pAction.html("<p>Uncanny Sense</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 2){
-                    pAction.attr("onclick", "PlayerMoves.ShadowSlash()");
+                    pAction.attr("onclick", "controller.battleRound(16)");
                     pAction.html("<p>Shadow Salsh</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 3){
-                    pAction.attr("onclick", "PlayerMoves.Enshroud()");
+                    pAction.attr("onclick", "controller.battleRound(17)");
                     pAction.html("<p>Enshroud</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 4){
-                    pAction.attr("onclick", "PlayerMoves.VileTendrils()");
+                    pAction.attr("onclick", "controller.battleRound(18)");
                     pAction.html("<p>Vile Tendrils</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 5){
-                    pAction.attr("onclick", "PlayerMoves.MidnightStrangle()");
+                    pAction.attr("onclick", "controller.battleRound(19)");
                     pAction.html("<p>Midnight Strangle</p>");
 
                     allPActions.push(pAction);
@@ -127,31 +132,31 @@ let controller = {
                 break;
             case "cultist":
                 if (player.level == 1){
-                    pAction.attr("onclick", "PlayerMoves.Inheritance()");
+                    pAction.attr("onclick", "controller.battleRound(20)");
                     pAction.html("<p>Utilize Inheritance</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 2){
-                    pAction.attr("onclick", "PlayerMoves.EldritchGaze()");
+                    pAction.attr("onclick", "controller.battleRound(21)");
                     pAction.html("<p>Eldritch Gaze</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 3){
-                    pAction.attr("onclick", "PlayerMoves.Protonymic()");
+                    pAction.attr("onclick", "controller.battleRound(22)");
                     pAction.html("<p>Utilize Enemy Protonymic</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 4){
-                    pAction.attr("onclick", "PlayerMoves.Neonymic()");
+                    pAction.attr("onclick", "controller.battleRound(23)");
                     pAction.html("<p>Utilize Enemy Neonymic</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 5){
-                    pAction.attr("onclick", "PlayerMoves.Commune()");
+                    pAction.attr("onclick", "controller.battleRound(24)");
                     pAction.html("<p>Communicate in the elder tongue</p>");
 
                     allPActions.push(pAction);
@@ -159,31 +164,31 @@ let controller = {
                 break;
             case "writer":
                 if (player.level == 1){
-                    pAction.attr("onclick", "PlayerMoves.Offstage()");
+                    pAction.attr("onclick", "controller.battleRound(25)");
                     pAction.html("<p>Walk off stage</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 2){
-                    pAction.attr("onclick", "PlayerMoves.PointOfView()");
+                    pAction.attr("onclick", "controller.battleRound(26)");
                     pAction.html("<p>Switch Point of View</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 3){
-                    pAction.attr("onclick", "PlayerMoves.Dialogue()");
+                    pAction.attr("onclick", "controller.battleRound(27)");
                     pAction.html("<p>Dialogue</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 4){
-                    pAction.attr("onclick", "PlayerMoves.Rewrite()");
+                    pAction.attr("onclick", "controller.battleRound(28)");
                     pAction.html("<p>Rewrite Scene</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 5){
-                    pAction.attr("onclick", "PlayerMoves.Bribe()");
+                    pAction.attr("onclick", "controller.battleRound(29)");
                     pAction.html("<p>Bribe</p>");
 
                     allPActions.push(pAction);
@@ -192,7 +197,7 @@ let controller = {
         }
         
         if (player.level == 5){
-            pAction.attr("onclick", "PlayerMoves.HunterSense()");
+            pAction.attr("onclick", "PlayerMoves.HunterSense(30)");
             pAction.html("<p>Hunter's Sense</p>");
 
             allPActions.push(pAction);
@@ -210,6 +215,10 @@ let controller = {
     
         $("#battlescreen").css("background-image", "url('assets/images/setting/"+ player.level.toString() +".png");
         this.setMoves();
+    },
+
+    battleRound: function(selAction){
+
     },
 
     
