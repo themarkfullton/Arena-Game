@@ -45,17 +45,17 @@ let controller = {
         let allPActions = [];
         let pAction = $("<div>");
         pAction.attr("class", "ability");
-        pAction.attr("onclick", "player.PlayerMoves.Attack()");
+        pAction.attr("onclick", "PlayerMoves.Attack()");
         pAction.html("<p>Attack</p>");
         
         allPActions.push(pAction);
 
-        pAction.attr("onclick", "player.PlayerMoves.Defend()");
+        pAction.attr("onclick", "PlayerMoves.Defend()");
         pAction.html("<p>Defend</p>");
 
         allPActions.push(pAction);
 
-        pAction.attr("onclick", "player.PlayerMoves.Bribe()");
+        pAction.attr("onclick", "PlayerMoves.Bribe()");
         pAction.html("<p>Bribe</p>");
 
         allPActions.push(pAction);
@@ -63,133 +63,140 @@ let controller = {
         switch (player.classType){
             case "heir":
                 if (player.level == 1){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.FirstAid()");
+                    pAction.attr("onclick", "PlayerMoves.FirstAid()");
                     pAction.html("<p>First Aid</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 2){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.Reflect()");
+                    pAction.html("<p>Reflect</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 3){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.OtherSide()");
+                    pAction.html("<p>Mirror Travel</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 4){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.Mimicry()");
+                    pAction.html("<p>Mimic</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 5){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.HereditaryChaos()");
+                    pAction.html("<p>Hereditary Chaos</p>");
 
                     allPActions.push(pAction);
                 };
                 break;
             case "outlaw":
                 if (player.level == 1){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.UncannySense()");
+                    pAction.attr("onclick", "PlayerMoves.UncannySense()");
                     pAction.html("<p>Uncanny Sense</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 2){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.ShadowSlash()");
+                    pAction.html("<p>Shadow Salsh</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 3){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.Enshroud()");
+                    pAction.html("<p>Enshroud</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 4){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.VileTendrils()");
+                    pAction.html("<p>Vile Tendrils</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 5){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.MidnightStrangle()");
+                    pAction.html("<p>Midnight Strangle</p>");
 
                     allPActions.push(pAction);
                 };
                 break;
             case "cultist":
                 if (player.level == 1){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Fireball()");
-                    pAction.html("<p>First Aid</p>");
+                    pAction.attr("onclick", "PlayerMoves.Inheritance()");
+                    pAction.html("<p>Utilize Inheritance</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 2){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.EldritchGaze()");
+                    pAction.html("<p>Eldritch Gaze</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 3){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.Protonymic()");
+                    pAction.html("<p>Utilize Enemy Protonymic</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 4){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.Neonymic()");
+                    pAction.html("<p>Utilize Enemy Neonymic</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 5){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
-                    pAction.html("<p>Bribe</p>");
+                    pAction.attr("onclick", "PlayerMoves.Commune()");
+                    pAction.html("<p>Communicate in the elder tongue</p>");
 
                     allPActions.push(pAction);
                 };
                 break;
             case "writer":
                 if (player.level == 1){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Offstage()");
+                    pAction.attr("onclick", "PlayerMoves.Offstage()");
                     pAction.html("<p>Walk off stage</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 2){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.PointOfView()");
+                    pAction.attr("onclick", "PlayerMoves.PointOfView()");
                     pAction.html("<p>Switch Point of View</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 3){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Dialogue()");
+                    pAction.attr("onclick", "PlayerMoves.Dialogue()");
                     pAction.html("<p>Dialogue</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 4){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Rewrite()");
+                    pAction.attr("onclick", "PlayerMoves.Rewrite()");
                     pAction.html("<p>Rewrite Scene</p>");
 
                     allPActions.push(pAction);
                 };
                 if (player.level == 5){
-                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.attr("onclick", "PlayerMoves.Bribe()");
                     pAction.html("<p>Bribe</p>");
 
                     allPActions.push(pAction);
                 };
                 break;
         }
+        
+        if (player.level == 5){
+            pAction.attr("onclick", "PlayerMoves.HunterSense()");
+            pAction.html("<p>Hunter's Sense</p>");
+
+            allPActions.push(pAction);
+        };
 
         for (var i =0; i < allPActions.length; i++){
             $("#actions").append(allPActions[i]);
