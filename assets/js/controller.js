@@ -42,28 +42,35 @@ let controller = {
     },
 
     setMoves: function(){
-        let allPActions = [];
         let pAction = $("<div>");
         pAction.attr("class", "ability");
         pAction.attr("onclick", "controller.battleRound(0)");
         pAction.html("<p>Attack</p>");
         
-        allPActions.push(pAction);
+        $("#actions").append(pAction);
+
+        console.log("pAction is currently " + pAction);
 
         pAction.attr("onclick", "controller.battleRound(1)");
         pAction.html("<p>Defend</p>");
 
-        allPActions.push(pAction);
+        $("#actions").append(pAction);
+
+        console.log("pAction is currently " + pAction);
 
         pAction.attr("onclick", "controller.battleRound(2)");
         pAction.html("<p>Bribe</p>");
 
-        allPActions.push(pAction);
+        $("#actions").append(pAction);
+
+        console.log("pAction is currently " + pAction);
 
         pAction.attr("onclick", "controller.battleRound(3)");
         pAction.html("<p>Use Item</p>");
 
-        allPActions.push(pAction);
+        $("#actions").append(pAction);
+
+        console.log("pAction is currently " + pAction);
 
         switch (player.classType){
             case "heir":
@@ -71,7 +78,9 @@ let controller = {
                     pAction.attr("onclick", "controller.battleRound(10)");
                     pAction.html("<p>First Aid</p>");
 
-                    allPActions.push(pAction);
+                    $("#actions").append(pAction);
+
+                    console.log("pAction is currently " + pAction);
                 };
                 if (player.level == 2){
                     pAction.attr("onclick", "controller.battleRound(11)");
@@ -201,10 +210,6 @@ let controller = {
             pAction.html("<p>Hunter's Sense</p>");
 
             allPActions.push(pAction);
-        };
-
-        for (var i =0; i < allPActions.length; i++){
-            $("#actions").append(allPActions[i]);
         };
     },
 
