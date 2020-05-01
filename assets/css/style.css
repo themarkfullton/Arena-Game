@@ -98,6 +98,7 @@ h1, h2, h3 {
 }
 
 #battleLvl{
+    margin-left: 5px;
     font-size: 15px;
     font-weight: bold;
 }
@@ -140,7 +141,7 @@ h1, h2, h3 {
 
 .battlePic{
       height:250px;
-      box-shadow: 10px 10px black;
+      box-shadow: 5px 5px black;
   }
 
 #battleNotes{

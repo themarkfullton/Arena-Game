@@ -41,12 +41,168 @@ let controller = {
         enemy = new Enemy(this.setRanNum());
     },
 
+    setMoves: function(){
+        let allPActions = [];
+        let pAction = $("<div>");
+        pAction.attr("class", "ability");
+        pAction.attr("onclick", "player.PlayerMoves.Attack()");
+        pAction.html("<p>Attack</p>");
+        
+        allPActions.push(pAction);
+
+        pAction.attr("onclick", "player.PlayerMoves.Defend()");
+        pAction.html("<p>Defend</p>");
+
+        allPActions.push(pAction);
+
+        pAction.attr("onclick", "player.PlayerMoves.Bribe()");
+        pAction.html("<p>Bribe</p>");
+
+        allPActions.push(pAction);
+
+        switch (player.classType){
+            case "heir":
+                if (player.level == 1){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.FirstAid()");
+                    pAction.html("<p>First Aid</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 2){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 3){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 4){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 5){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                break;
+            case "outlaw":
+                if (player.level == 1){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.UncannySense()");
+                    pAction.html("<p>Uncanny Sense</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 2){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 3){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 4){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 5){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                break;
+            case "cultist":
+                if (player.level == 1){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Fireball()");
+                    pAction.html("<p>First Aid</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 2){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 3){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 4){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 5){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                break;
+            case "writer":
+                if (player.level == 1){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Offstage()");
+                    pAction.html("<p>Walk off stage</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 2){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.PointOfView()");
+                    pAction.html("<p>Switch Point of View</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 3){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Dialogue()");
+                    pAction.html("<p>Dialogue</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 4){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Rewrite()");
+                    pAction.html("<p>Rewrite Scene</p>");
+
+                    allPActions.push(pAction);
+                };
+                if (player.level == 5){
+                    pAction.attr("onclick", "moveLibrary.PlayerMoves.Bribe()");
+                    pAction.html("<p>Bribe</p>");
+
+                    allPActions.push(pAction);
+                };
+                break;
+        }
+
+        for (var i =0; i < allPActions.length; i++){
+            $("#actions").append(allPActions[i]);
+        };
+    },
+
     setFight: function(){
         this.setEnemy();
 
-        $("#interface").html('<div id="battlescreen"><div class="row d-flex justify-content-between" id="insideBattle"><div id="battlePlayer"><div id="battlePlayerName"><h3>' + player.pName + '<span id="battleLvl">Level' + player.level + '</span></h3></div><div id="battlePlayerBars" class="col-lg-4"><div class ="progress" id="playerHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((player.curHealth/player.health)*100) +'%"></span></div><div class ="progress" id="playerWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((player.curWill/player.willpower)*100) + '%"></span></div><div class ="progress" id="playerExpBar" data-label="Experience"><span class="expBar" style="width: ' + ((player.exp/player.toNextLvl)*100) +'"></span></div></div></div><div id="battleEnemy"><div id="battleEnemyName"><h3>' + enemy.disClassType + '<span id="battleLvl">Level' + enemy.level + '</span></h3></div><div id="battleEnemyBars" class="col-lg-4"><div class ="progress" id="enemyHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((enemy.curHealth/enemy.health)*100) + '%"></span></div><div class ="progress" id="enemyWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((enemy.curWill/enemy.willpower)*100) + '%"></span></div></div></div></div><div class="row d-flex justify-content-between" id="insideBattlePicRow"><div id="battlePlayerPic"><img class="battlePic" src="assets/images/Icons/Players/'+ player.classType + player.pId +'.png"></div><div id="battleEnemyPic"><img class="battlePic" src="assets/images/Icons/Enemies/' + enemy.classType + '.png"></div></div></div><div id="battleNotes"><p>A ' + enemy.disClassType + ' appears</p></div><div id="actions"><div class="row justify-content-center"></div></div></div>');
+        $("#interface").html('<div id="battlescreen"><div class="row d-flex justify-content-between" id="insideBattle"><div id="battlePlayer"><div id="battlePlayerName"><h3>' + player.pName + '<span id="battleLvl">Level' + player.level + '</span></h3></div><div id="battlePlayerBars" class="col-lg-4"><div class ="progress" id="playerHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((player.curHealth/player.health)*100) +'%"></span></div><div class ="progress" id="playerWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((player.curWill/player.willpower)*100) + '%"></span></div><div class ="progress" id="playerExpBar" data-label="Experience"><span class="expBar" style="width: ' + ((player.exp/player.toNextLvl)*100) +'"></span></div></div></div><div id="battleEnemy"><div id="battleEnemyName"><h3>' + enemy.disClassType + '<span id="battleLvl">Level' + enemy.level + '</span></h3></div><div id="battleEnemyBars" class="col-lg-4"><div class ="progress" id="enemyHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((enemy.curHealth/enemy.health)*100) + '%"></span></div><div class ="progress" id="enemyWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((enemy.curWill/enemy.willpower)*100) + '%"></span></div></div></div></div><div class="row d-flex justify-content-between" id="insideBattlePicRow"><div id="battlePlayerPic"><img class="battlePic" src="assets/images/Icons/Players/'+ player.classType + player.pId +'.png"></div><div id="battleEnemyPic"><img class="battlePic" src="assets/images/Icons/Enemies/' + enemy.classType + '.png"></div></div></div><div id="battleNotes"><p>A ' + enemy.disClassType + ' appears</p></div><div id="actionDiv"><div id="actions" class="row justify-content-center"></div></div></div>');
     
         $("#battlescreen").css("background-image", "url('assets/images/setting/"+ player.level.toString() +".png");
+        this.setMoves();
     },
 
     
