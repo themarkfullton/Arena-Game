@@ -6,13 +6,13 @@ function Player (pId, classType) {
         case "heir":
             this.disClassType = "The Heir";
             this.fightStyle = "01";
-            this.health = 150; 
+            this.health = 10; 
             this.willpower = 5;
             this.strength = 20; 
             this.intelligence = 0;
             this.agility = 20;
             this.dexterity = 10;
-            this.defense = 25;
+            this.defense = 10;
             this.tenacity = 10;
             break;
         case "outlaw":
@@ -56,7 +56,7 @@ function Player (pId, classType) {
     this.curHealth = this.health;
     this.curWill = this.willpower; 
     this.exp = 0;
-    this.toNextLvl = 100;
+    this.toNextLvl = 10;
     this.gold = 10;
     this.bestiary = [];
     this.inventory = [];

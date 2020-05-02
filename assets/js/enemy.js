@@ -5,6 +5,7 @@ function Enemy (i) {
     this.classType = bestiary[i].classType;
     this.disClassType= bestiary[i].disClassType;
     this.level= bestiary[i].level;
+    this.fightType = bestiary[i].fightType;
     this.health= bestiary[i].health;
     this.curHealth = this.health;
     this.willpower = bestiary[i].willpower;
