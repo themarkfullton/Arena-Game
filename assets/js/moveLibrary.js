@@ -1,3 +1,8 @@
+/* This is basically a list of all the moves utilized in combat.
+ *The problem is that I ran out of time; so there's only really two moves here. 
+ *I'm hoping to go back in after the assignment is graded and add all the things here so I'm keeping them in here for now 
+ *Enemy attack is at the waaaaay bottom. I was going to have enemy abilities start from there, but didn't get around to it (surprise)*/
+
 let PlayerMoves = [
     Attack = function(){
         console.log("Ran attack fun");

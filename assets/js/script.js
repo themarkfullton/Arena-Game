@@ -1,3 +1,5 @@
+/* Runs the instructions, scripts, and the like. Not much here owing to time constraints */
+
 let script = {
     // Writes the intructions onto the interface div of index.html
     instructions: function(){
@@ -17,6 +19,7 @@ let script = {
         $("#interface").html('<div class="row"><div class="col-lg-4"><h3>Character Name</h3></div><div class="col-lg-8"><input type="text" id="pName" value="Grimoire" style="width: 100%;"></div></div><hr><div class="row"><div class="col-lg-6 my-auto"><img src="assets/images/Icons/Players/' + player.classType + player.pId + '.png"></div><div class="col-lg-6 my-auto"><h3>' + player.disClassType +'</h3><p><strong>Health:</strong> ' + player.health +'</p><p><strong>Willpower:</strong> ' + player.willpower + '</p><p><strong>Strength:</strong> ' + player.strength +'</p><p><strong>Intelligence:</strong> ' + player.intelligence + '</p><p><strong>Agility:</strong> ' + player.agility + '</p><p><strong>Dexterity:</strong> ' + player.dexterity + '</p><p><strong>Defense:</strong> ' + player.defense + '</p><p><strong>Tenacity:</strong> ' + player.tenacity + '</p></div></div><hr><div class="row"><div class="col-lg-6 my-auto"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="script.charSelectScreen()">Go Back</button></div><div class="col-lg-6 my-auto"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="controller.namePlayer()">Confirm</button></div></div>');
     },
 
+    /* Writes the flair text before starting level 1 */
     scriptIntro: function(){
         switch(player.classType){
             case "heir":
@@ -34,6 +37,7 @@ let script = {
         }
     },
 
+    /* Writes the flair text intro to Level 1 */
     scriptLvl1Start: function(){
         let qText = '';
         switch(player.classType){

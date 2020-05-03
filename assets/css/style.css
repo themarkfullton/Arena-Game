@@ -178,7 +178,7 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-/*Shop Related*/
+/*Shop Related -- Never got around to it, but you can see the design in test.html*/
 #shopOuter{
     width: 90%;
     height: 400px;
@@ -226,7 +226,6 @@ h1, h2, h3 {
     border-radius: 6px;
     padding: 5px 0;
 
-    /* Position the tooltip */
     position: absolute;
     z-index: 10;
 }

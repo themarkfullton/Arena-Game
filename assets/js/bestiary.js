@@ -1,3 +1,7 @@
+/* This holds all the game's enemies. Utilized by controller and enemy to create a new enemy.
+ * See the enemy page for an explanation of what the stats do
+*/
+
 var bestiary = [
     ghast = {
         classType: "ghast",

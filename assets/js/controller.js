@@ -1,15 +1,18 @@
+/* Essentially runs the game */
+
 let controller = {
+    // Creates player and sends to Confirm Character Screen
     setGameStart: function(pId, classType){
         this.createPlayer(pId, classType);
         script.charConfScreen();
     },
 
+    // Creates a player
     createPlayer: function(pId, classType){
         player = new Player (pId, classType);
-        console.log("New player of ID " + pId + " and class type " + classType + " has been created.")
-        
     },
 
+    // Names the created player
     namePlayer: function(){
         player.pName = $('#pName').val();
         script.scriptIntro();
@@ -32,29 +35,16 @@ let controller = {
         else if (player.level >= 4){
             sRanNum = Math.floor(Math.random() * Math.floor(bestiary.length));
         }
-
-        /* Old Code
-        switch(player.level){
-            case 1:
-                sRanNum = Math.floor(Math.random() * Math.floor(4)); // returns a random num 0 to 3
-                break;
-            case 2:
-                sRanNum = Math.floor(Math.random() * Math.floor(8)); // returns a random num 0 to 7
-                break;
-            case 3:
-                sRanNum = Math.floor(Math.random() * Math.floor(13)); // returns a random num 0 to 12
-                break;
-            case 4:
-                sRanNum = Math.floor(Math.random() * Math.floor(bestiary.length)); // returns a random num 0 to 16
-                break;
-        }*/
+        
             return sRanNum;
     },
 
+    // Creates an enemy with the random number generated
     setEnemy: function(){
         enemy = new Enemy(this.setRanNum());
     },
 
+    // Sets up the battle screen with a new enemy
     setFight: function(){
         player.curHealth = player.health;
         this.setEnemy();
@@ -64,6 +54,7 @@ let controller = {
         $("#battlescreen").css("background-image", "url('assets/images/setting/"+ player.level.toString() +".png");
     },
 
+    //Runs the battle
     battleRound: function(selAction){
         let check = 0;
         if (player.curHealth > 0 && enemy.curHealth >0){
@@ -93,6 +84,7 @@ let controller = {
         }
     },
 
+    //Runs the player turn; you can see that I've set it up for the player to select other moves... but only have one move. Time constraints.
     playerTurn(selAction){
         let baseDamage = PlayerMoves[selAction]();
 
@@ -109,6 +101,7 @@ let controller = {
         
     },
 
+    //Runs the enemy turn
     enemyTurn(){
         let baseDamage = PlayerMoves[29]();
 
@@ -124,6 +117,7 @@ let controller = {
         $("#enemyWillBar").html('<span class="constBar" style="width: ' + ((enemy.curWill/enemy.willpower)*100) + '%"></span>');
     },
 
+    // Checks if the player has won or lost the round; if so, it adjusts accordingly
     checkWin(){
         if (enemy.curHealth <= 0) {
             var newDiv = $("<div>");
@@ -173,6 +167,7 @@ let controller = {
         return 0;
     },
 
+    //Increases player level and ups their stats
     levelUp: function() {
         player.level++;
         player.toNextLvl = player.toNextLvl+ 30;
