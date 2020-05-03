@@ -5,49 +5,51 @@ function Player (pId, classType) {
     switch (classType){
         case "heir":
             this.disClassType = "The Heir";
-            this.fightStyle = "01";
-            this.health = 10; 
-            this.willpower = 5;
-            this.strength = 20; 
-            this.intelligence = 0;
-            this.agility = 20;
-            this.dexterity = 10;
+            this.fightStyle = 0;
+            this.health = 60; 
+            this.willpower = 3;
+            this.strength = 8; 
+            this.intelligence = 3;
+            this.agility = 6;
+            this.dexterity = 5;
             this.defense = 10;
-            this.tenacity = 10;
+            this.tenacity = 5;
             break;
         case "outlaw":
             this.disClassType = "The Outlaw";
-            this.fightStyle = "01"
-            this.health = 110; 
-            this.willpower = 10;
-            this.strength = 10; 
-            this.intelligence = 0;
-            this.agility = 30;
-            this.dexterity = 30;
-            this.defense = 15;
-            this.tenacity = 10;
+            this.fightStyle = 0;
+            this.health = 50; 
+            this.willpower = 5;
+            this.strength = 6; 
+            this.intelligence = 5;
+            this.agility = 10;
+            this.dexterity = 10;
+            this.defense = 8;
+            this.tenacity = 4;
             break;
         case "cultist":
             this.disClassType = "The Cultist";
-            this.health = 50;
+            this.fightStyle = 1;
+            this.health = 40;
             this.willpower = 30;
-            this.strength = 5; 
-            this.intelligence = 20;
-            this.agility = 20;
-            this.dexterity = 20;
-            this.defense = 10;
-            this.tenacity = 15;
+            this.strength = 3; 
+            this.intelligence = 10;
+            this.agility = 8;
+            this.dexterity = 10;
+            this.defense = 6;
+            this.tenacity = 10;
             break;
         case "writer":
             this.disClassType = "The Writer";
-            this.health = 90;
-            this.willpower = 20;
-            this.strength = 2; 
-            this.intelligence = 10;
-            this.agility = 15;
-            this.dexterity = 15;
-            this.defense = 20;
-            this.tenacity = 20;
+            this.fightStyle = 1;
+            this.health = 45;
+            this.willpower = 27;
+            this.strength = 3; 
+            this.intelligence = 8;
+            this.agility = 10;
+            this.dexterity = 8;
+            this.defense = 9;
+            this.tenacity = 9;
             break;
     };
     
@@ -56,7 +58,7 @@ function Player (pId, classType) {
     this.curHealth = this.health;
     this.curWill = this.willpower; 
     this.exp = 0;
-    this.toNextLvl = 10;
+    this.toNextLvl = 30;
     this.gold = 10;
     this.bestiary = [];
     this.inventory = [];

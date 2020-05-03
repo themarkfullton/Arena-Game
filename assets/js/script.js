@@ -1,7 +1,7 @@
 let script = {
     // Writes the intructions onto the interface div of index.html
     instructions: function(){
-        $( "#interface" ).html('<p>This is an arena game.</p><p>After selecting a character, you’ll fight a series of monsters. Every monster defeated will increase your experience.</p><p>When you have enough experience to gain a level, you’ll need to defeat a boss. Reach Level 5 and you’ll be facing off against the Final Boss.</p><h5>REMEMBER: This game is currently not connected to a server. Therefore, anytime you refresh or try to backpage, you’ll lose all your progress.</h5><button type="button" class="btn btn-primary btn-lg btn-block" onclick="script.charSelectScreen()">Select Character</button>');
+        $( "#interface" ).html('<p>This is an arena game.</p><p>After selecting a character, you’ll fight a series of monsters. Every monster defeated will increase your experience.</p><p>Unfortunately, this game is still in process, but you can (theoretically) fight and gain levels indefinitley.</h5><button type="button" class="btn btn-primary btn-lg btn-block" onclick="script.charSelectScreen()">Select Character</button>');
 
     },
 

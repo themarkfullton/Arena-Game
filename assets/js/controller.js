@@ -20,6 +20,20 @@ let controller = {
     setRanNum: function(){
         let sRanNum;
 
+        if (player.level == 1){
+            sRanNum = Math.floor(Math.random() * Math.floor(4));
+        }
+        else if (player.level == 2){
+            sRanNum = Math.floor(Math.random() * Math.floor(8));
+        }
+        else if (player.level == 3){
+            sRanNum = Math.floor(Math.random() * Math.floor(13));
+        }
+        else if (player.level >= 4){
+            sRanNum = Math.floor(Math.random() * Math.floor(bestiary.length));
+        }
+
+        /* Old Code
         switch(player.level){
             case 1:
                 sRanNum = Math.floor(Math.random() * Math.floor(4)); // returns a random num 0 to 3
@@ -31,9 +45,9 @@ let controller = {
                 sRanNum = Math.floor(Math.random() * Math.floor(13)); // returns a random num 0 to 12
                 break;
             case 4:
-                sRanNum = Math.floor(Math.random() * Math.floor(17)); // returns a random num 0 to 16
+                sRanNum = Math.floor(Math.random() * Math.floor(bestiary.length)); // returns a random num 0 to 16
                 break;
-        }
+        }*/
             return sRanNum;
     },
 
@@ -41,22 +55,19 @@ let controller = {
         enemy = new Enemy(this.setRanNum());
     },
 
-    setMoves: function(){
-        
-    },
-
     setFight: function(){
+        player.curHealth = player.health;
         this.setEnemy();
 
-        $("#interface").html('<div id="battlescreen"><div class="row d-flex justify-content-between" id="insideBattle"><div id="battlePlayer"><div id="battlePlayerName"><h3>' + player.pName + '<span id="battleLvl">Level' + player.level + '</span></h3></div><div id="battlePlayerBars" class="col-lg-4"><div class ="progress" id="playerHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((player.curHealth/player.health)*100) +'%"></span></div><div class ="progress" id="playerWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((player.curWill/player.willpower)*100) + '%"></span></div><div class ="progress" id="playerExpBar" data-label="Experience"><span class="expBar" style="width: ' + ((player.exp/player.toNextLvl)*100) +'"></span></div></div></div><div id="battleEnemy"><div id="battleEnemyName"><h3>' + enemy.disClassType + '<span id="battleLvl">Level' + enemy.level + '</span></h3></div><div id="battleEnemyBars" class="col-lg-4"><div class ="progress" id="enemyHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((enemy.curHealth/enemy.health)*100) + '%"></span></div><div class ="progress" id="enemyWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((enemy.curWill/enemy.willpower)*100) + '%"></span></div></div></div></div><div class="row d-flex justify-content-between" id="insideBattlePicRow"><div id="battlePlayerPic"><img class="battlePic" src="assets/images/Icons/Players/'+ player.classType + player.pId +'.png"></div><div id="battleEnemyPic"><img class="battlePic" src="assets/images/Icons/Enemies/' + enemy.classType + '.png"></div></div></div><div id="battleNotes"><p>A ' + enemy.disClassType + ' appears</p></div><div id="actionDiv"><div id="actions" class="row justify-content-center"> <div class="ability" onclick="controller.battleRound(0)">Attack</div><div class="ability" onclick="controller.battleRound(1)">Bribe</div><div class="ability" onclick="controller.battleRound(2)">UseItem</div></div></div></div><div id="treasureBox" class="d-flex justify-content-center"><h5>Gold: <span class="treasureAmt">' + player.gold + '</span></h5></div>');
+        $("#interface").html('<div id="battlescreen"><div class="row d-flex justify-content-between" id="insideBattle"><div id="battlePlayer"><div id="battlePlayerName"><h3>' + player.pName + '<span id="battleLvl">Level' + player.level + '</span></h3></div><div id="battlePlayerBars" class="col-lg-4"><div class ="progress" id="playerHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((player.curHealth/player.health)*100) +'%"></span></div><div class ="progress" id="playerWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((player.curWill/player.willpower)*100) + '%"></span></div><div class ="progress" id="playerExpBar" data-label="Experience"><span class="expBar" style="width: ' + ((player.exp/player.toNextLvl)*100) +'%"></span></div></div></div><div id="battleEnemy"><div id="battleEnemyName"><h3>' + enemy.disClassType + '<span id="battleLvl">Level' + enemy.level + '</span></h3></div><div id="battleEnemyBars" class="col-lg-4"><div class ="progress" id="enemyHealthBar" data-label="Health"><span class="healthBar" style="width: ' + ((enemy.curHealth/enemy.health)*100) + '%"></span></div><div class ="progress" id="enemyWillBar" data-label="Willpower"><span class="constBar" style="width: ' + ((enemy.curWill/enemy.willpower)*100) + '%"></span></div></div></div></div><div class="row d-flex justify-content-between" id="insideBattlePicRow"><div id="battlePlayerPic"><img class="battlePic" src="assets/images/Icons/Players/'+ player.classType + player.pId +'.png"></div><div id="battleEnemyPic"><img class="battlePic" src="assets/images/Icons/Enemies/' + enemy.classType + '.png"></div></div></div><div id="battleNotes"><p>A ' + enemy.disClassType + ' appears</p></div><div id="actionDiv"><div id="actions" class="row justify-content-center"> <div class="ability" onclick="controller.battleRound(0)">Attack</div></div></div></div><div id="treasureBox" class="d-flex justify-content-center"><h5>Gold: <span class="treasureAmt">' + player.gold + '</span></h5></div>');
     
         $("#battlescreen").css("background-image", "url('assets/images/setting/"+ player.level.toString() +".png");
-        //this.setMoves();
     },
 
     battleRound: function(selAction){
         let check = 0;
         if (player.curHealth > 0 && enemy.curHealth >0){
+                        
             if (player.agility >= enemy.agility){
                 console.log("P Speed " + player.agility);
                 console.log("E Speed " + enemy.agility);
@@ -121,10 +132,12 @@ let controller = {
 
             $("#battleNotes").prepend(newDiv);
 
-            player.exp =+ enemy.exp;
-            player.gold =+ enemy.gold;
+            player.exp = player.exp + enemy.exp;
+            console.log("P Exp" + player.exp);
 
-            if(player.exp >= player.toNextLvl){
+            player.gold = player.gold + enemy.gold;
+
+            if(player.exp >= player.toNextLvl){                
                 controller.levelUp();
 
                 var newDiv = $("<div>");
@@ -139,7 +152,11 @@ let controller = {
             $("#playerExpBar").html('<span class="expBar" style="width: ' + ((player.exp/player.toNextLvl)*100) +'%"></span>');
             $("#treasureBox").html('<h5>Gold: <span class="treasureAmt">' + player.gold + '</span></h5>');
 
-            // **** New event!!! *****
+            var newDiv = $("<div>");
+
+            newDiv.html('<p>Unfortunately, this is still in progress, but you can continue to play, level up and gather gold.</p><button type="button" class="btn btn-primary btn-lg btn-block" onclick="controller.setFight()">Click Here to Fight New Enemy!</button>');
+                
+            $("#battleNotes").prepend(newDiv);
 
             return 1;
         }
@@ -156,5 +173,27 @@ let controller = {
         return 0;
     },
 
+    levelUp: function() {
+        player.level++;
+        player.toNextLvl = player.toNextLvl+ 30;
+        
+        if (player.classType == "heir" || player.classType == "outlaw"){
+            player.health = player.health + 10;
+            player.willpower = player.willpower + 3;
+            player.strength = player.strength + 5;
+            player.defense = player.defense + 4;
+            player.dexterity = player.dexterity + 3;
+            player.tenacity = player.tenacity+ 2;
+        }
+        else{
+            player.health = player.health + 6;
+            player.willpower = player.willpower + 6;
+            player.intelligence = player.intelligence + 5;
+            player.defense = player.defense + 3;
+            player.dexterity = player.dexterity + 3;
+            player.tenacity = player.tenacity + 5;
+        }
 
+        player.exp = 0;
+    },
 }
