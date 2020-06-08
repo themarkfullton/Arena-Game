@@ -79,7 +79,7 @@ let controller = {
 
     $("#battlescreen").css(
       "background-image",
-      "url('assets/images/setting/" + player.level.toString() + ".png"
+      "url('assets/images/Setting/" + player.level.toString() + ".png"
     );
   },
 
