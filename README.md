@@ -27,3 +27,10 @@ HTML, CSS, JQuery, Javascript
 ## Motivation
 
 Created during the coronavirus quarantine as a way to amuse my friends (big Lovecraft buffs).
+
+## Screenshots
+
+<img src="snapshot1.PNG">
+<img src="snapshot2.PNG">
+<img src="snapshot3.PNG">
+<img src="snapshot4.PNG">
