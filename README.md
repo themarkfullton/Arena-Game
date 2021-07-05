@@ -1,6 +1,6 @@
 # Dreamlands - A Lovecraftian Arena game
 
-**Link to Live:** https://themarkfullton.github.io/Arena-Game/
+**Link to Live:** https://themarkfullton.github.io/OOP-Arena/
 
 Went overboard in creating a student example for OOP with JS.
 
