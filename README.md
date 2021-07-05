@@ -2,15 +2,11 @@
 
 **Link to Live:** https://themarkfullton.github.io/Arena-Game/
 
-This is a spin on the classic arena style game. You create a character and go toe-to-toe with enemies that are randomized depending on your level.
+Went overboard in creating a student example for OOP with JS.
 
-There's supposed to be a whole story arc, bosses, abilities AND an inventory system, but I haven't quite gotten around to those. I will do so ASAP.
+Still use it in explaining classes to JS so I don't have to do the usual "dogs" example.
 
-Also, please note, the images here are placeholders. I don't own any of them and will be replacing them with my own things. Owing to time constraints, however, I chose to focus on the game function.
-
-## Build Status
-
-In progress.
+**Currently refactoring to meet more up-to-date JS OOP standards**
 
 Needs added:
 
@@ -23,10 +19,6 @@ Needs added:
 ## Languages Used
 
 HTML, CSS, JQuery, Javascript
-
-## Motivation
-
-Created during the coronavirus quarantine as a way to amuse my friends (big Lovecraft buffs).
 
 ## Screenshots
 
